@@ -1,0 +1,202 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.navbar-links button {
+  width: auto;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.navbar-links button.outline {
+  color: white;
+  border-color: white;
+}
+
+.navbar-links button.outline:hover {
+  background: white;
+  color: #667eea;
+}
+
+/* Landing */
+.landing {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  max-width: 600px;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 span { color: #ffd700; }
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 480px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.hero .btn-group button {
+  width: auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+.hero .btn-group button.outline {
+  color: white;
+  border-color: white;
+}
+
+.hero .btn-group button.outline:hover {
+  background: white;
+  color: #667eea;
+}
+
+/* Auth */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f4f8;
+}
+
+.auth-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-card h2 { text-align: center; color: #4a3f8f; margin-bottom: 0.5rem; }
+.auth-card p  { text-align: center; font-size: 0.9rem; color: #666; }
+.auth-card a  { color: #667eea; text-decoration: none; }
+.auth-card a:hover { text-decoration: underline; }
+
+.row { display: flex; gap: 0.75rem; }
+.row input { flex: 1; }
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+input:focus { border-color: #667eea; }
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #667eea;
+  color: white;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+button:hover:not(:disabled) { background: #5a6fd6; border-color: #5a6fd6; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+button.outline {
+  background: transparent;
+  color: #667eea;
+}
+button.outline:hover { background: #667eea; color: white; }
+
+/* Messages */
+.msg {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.msg.error   { background: #fde8e8; color: #c0392b; }
+.msg.success { background: #e8f8f0; color: #27ae60; }
+
+/* Dashboard */
+.dashboard { min-height: 100vh; background: #f0f4f8; }
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.dashboard-header h2 { color: #4a3f8f; }
+.dashboard-header button { width: auto; padding: 0.5rem 1.25rem; }
+
+.dashboard-body {
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.dashboard-body h3 { font-size: 1.5rem; color: #4a3f8f; margin-bottom: 0.75rem; }
+.dashboard-body p  { color: #666; line-height: 1.6; }
